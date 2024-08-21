@@ -1,0 +1,37 @@
+# TrackMyCents
+
+**TrackMyCents** is an all-in-one expense management solution designed to help users take control of their finances. Whether you're tracking daily expenses, planning a trip, or trying to save money, TrackMyCents offers a suite of tools to make managing your money simple and intuitive.
+
+## Features
+
+### 1. **Expense Tracking**
+   - Record daily expenses with categories for easy organization.
+   - View and analyze your spending patterns through detailed reports and charts.
+   - Easily edit or delete transactions.
+
+### 2. **Budget Manager**
+   - Set monthly or weekly budget goals.
+   - Receive alerts when you're close to exceeding your budget.
+   - Track your progress over time to see how well you're sticking to your financial goals.
+
+### 3. **Trip Advisor**
+   - Plan your trips with an integrated trip budgeting tool.
+   - Estimate the cost of transportation, accommodation, food, and other expenses.
+   - Get AI/ML-generated recommendations for the minimum cost to visit any location.
+
+### 4. **Money Saver**
+   - Identify unnecessary expenses and receive suggestions on how to cut down.
+   - Set up savings goals and track your progress.
+   - Access tips and tricks for saving money in your daily life.
+
+### 5. **Report Generation**
+   - Generate detailed reports on your spending habits.
+   - Export your expense reports to PDF or Excel for easy sharing or record-keeping.
+
+## Technologies Used
+
+- **HTML/CSS**: For structuring and styling the web pages.
+- **JavaScript**: For adding interactivity and dynamic features.
+- **AI/ML Integration**: To provide personalized budget and trip planning recommendations.
+- **Backend (optional)**: Integration with databases and APIs for data storage and retrieval.
+
