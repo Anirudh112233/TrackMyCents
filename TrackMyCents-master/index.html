@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>TrackMyCents</h1>
-        <button class="Start-Tracking-button">Start Tracking</button>
+        <button onclick="startTracking()" href="startTracking.html" class="Start-Tracking-button">Start Tracking</button>
     </header>
 
     <div class="container">
@@ -39,5 +39,11 @@
     <footer>
         <p>&copy; 2024 TrackMyCents. All rights reserved.</p>
     </footer>
+    
+    <script>
+        function startTracking() {
+            window.location.href = 'startTracking.html'; // Redirect to the startTracking page
+        }
+    </script>
 </body>
 </html>
