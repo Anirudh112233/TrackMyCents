@@ -1,4 +1,4 @@
-/* styles.css */
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,39 +8,73 @@ body {
     height: 100vh;
 }
 
+/* Header styles */
 header {
-    background-color: #333;
+    background-color: #000000;
     color: white;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+/* Menu toggle button */
+#menu-toggle {
+    background: none;
+    border: none;
     color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Menu icon lines */
+.menu-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Start Tracking button */
+.Start-Tracking-button {
+    background-color: #085f1e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-    flex: 1;
+/* Side menu styles */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #000000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000; /* Ensure it is on top */
+    padding: 15px;
 }
 
-.side-menu {
-    width: 200px;
-    background-color: #f4f4f4;
-    padding: 15px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+#side-menu button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+/* Side menu open state */
+#side-menu.open {
+    left: 0;
 }
 
 .side-menu h2 {
@@ -59,19 +93,21 @@ nav ul li a {
 
 .side-menu ul li a {
     text-decoration: none;
-    color: #333;
+    color: #e3dddd;
 }
 
 .side-menu ul li a:hover {
     text-decoration: underline;
 }
 
+/* Main content area */
 main {
     flex: 1;
     padding: 20px;
     background-color: #fff;
 }
 
+/* Footer styles */
 footer {
     background-color: #333;
     color: white;
