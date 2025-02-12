@@ -1,0 +1,17 @@
+{
+  "name": "trackmycents",
+  "version": "1.0.0",
+  "description": "**Take control of your finances with TrackMyCents!**   An all-in-one expense management solution that simplifies budgeting, tracks spending, and helps you achieve your financial goals effortlessly.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^8.10.0"
+  }
+}

@@ -1,25 +1,32 @@
-/* Base styles */
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html, body {
+    height: 100%; /* Full height for both */
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    background: color #f7f7f7;;
-    align-items: center;
-    justify-content: center;
-}
-p{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-:root {
-    --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+/* The body should take all the available space */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f7f7f7;
+    height: 100%; /* Full height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
-* {
+/* Main section should take remaining space */
+main {
+    flex: 1; /* Take available space */
+    padding: 20px;
+    background: linear-gradient(45deg, #350f06, #5e94ad);
+    color: #000000;
+    width: 100%;
     box-sizing: border-box;
 }
+
 
 .container {
     margin: 30px auto;
@@ -27,24 +34,29 @@ p{
 }
 
 h1 {
-    letter-spacing: 1px;
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #dc8a73, #646bed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-h2{
+
+h2 {
+    font-size: 40px;
+    text-align: center;
     letter-spacing: 1px;
-    font-family:'Times New Roman', Times, serif;
-    
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h3 {
     border-bottom: 1px solid #b3b3b3;
     padding-bottom: 10px;
     margin: 40px 0 10px;
-}
-
-h4 {
-    margin: 0;
-    text-transform: uppercase;
 }
 
 .inc-exp-container {
@@ -55,224 +67,298 @@ h4 {
     justify-content: center;
     margin: 20px 0;
 }
-.inc-exp-container > div{
-    flex:1;
+
+.inc-exp-container > div {
+    flex: 1;
     text-align: center;
 }
-.inc-exp-container > div:first-of-type{
+
+.inc-exp-container > div:first-of-type {
     border-right: 1px solid #dedede;
 }
-.money{
+
+.money {
     font-size: 20px;
     letter-spacing: 1px;
     margin: 5px 0;
 }
-.money-plus{
+
+.money-plus {
     color: #2ecc71;
 }
-.money-minus{
-    color: #c0392b ;
+
+.money-minus {
+    color: #c0392b;
 }
-label{
-    display:inline-block ;
-    margin:10 px 0;
+
+label {
+    display: inline-block;
+    margin: 10px 0;
 }
-input[type="text"],input[type="number"]{
+
+input[type="text"], input[type="number"] {
     border: 1px solid #dedede;
     border-radius: 2px;
-    display:block;
+    display: block;
     font-size: 16px;
-    padding:10px;
-    width:100%;
-    
+    padding: 10px;
+    width: 100%;
 }
-.btn{
+
+.btn {
     cursor: pointer;
     padding: 10px 70px;
-    font-family:cursive;
-    color:#f7f7f7;
+    font-family: cursive;
+    color: #f7f7f7;
     background-color: rgb(5, 56, 40);
     box-shadow: var(--box-shadow);
-    display:flex;
-    margin:10px 45px;
+    display: flex;
+    margin: 10px 45px;
 }
-.btn:focus,.delete-btn:focus{
+
+.btn:focus, .delete-btn:focus {
     outline: 0;
 }
-.list{
+
+.list {
     list-style-type: none;
-    padding:0;
-    margin-bottom:40px;
+    padding: 0;
+    margin-bottom: 40px;
 }
-.list li{
+
+.list li {
     background-color: #fff;
     box-shadow: var(--box-shadow);
-    color:black;
-    display:flex;
+    color: black;
+    display: flex;
     justify-content: space-between;
-    position:relative;
-    padding:10px;
-    margin:10px 0;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
 }
-.list.li.plus{
-    border-right: 5px solid #2ecc71;
 
+.list.li.plus {
+    border-right: 5px solid #2ecc71;
 }
-.list.li.minus{
-    border-right: 5px solid #c0392b ;
+
+.list.li.minus {
+    border-right: 5px solid #c0392b;
 }
-.delete-btn{
-    cursor:poiter;
-    background-color:#c0392b ;
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #c0392b;
     border: 0;
     color: #ffffff;
     font-size: 20px;
     line-height: 20px;
-    padding:12px 9px;
-    position:absolute;
-    top:50%;
+    padding: 12px 9px;
+    position: absolute;
+    top: 50%;
     left: 0;
-    transform: translate(-100%,-50%);
-    opacity:0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
     transition: opacity 0.3s ease;
-     
 }
-.list li:hover .delete-btn{
-    opacity:1;
+
+.list li:hover .delete-btn {
+    opacity: 1;
 }
 
 /* Header styles */
 header {
+    display: flex;
+    align-items: center;
     background-color: #000000;
     color: rgb(221, 216, 216);
-    padding: 20px 10px; /* Adjusted padding */
-    display: flex;
-    justify-content: space-between; /* Distributes space between items */
-    align-items: center; /* Centers items vertically */
-    position: relative; /* Ensures absolute positioning works for child elements */
-    width: 100%; /* Ensure header spans the full width of the page */
-    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-/* Menu toggle button */
+
 #menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 38px;
+    height: 24px;
     background: none;
     border: none;
-    color: white;
     cursor: pointer;
-    font-size: 24px;
+    margin-right: 20px;
 }
 
-/* Menu icon lines */
 .menu-icon {
     display: block;
-    width: 25px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    margin: 5px 0;
+    height: 4px;
+    width: 100%;
+    background-color: rgb(221, 216, 216);
+    border-radius: 2px;
+}
+.buttons {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 4dvi;
 }
 
-/* Position the Login button */
-#login-toggle {
-    background-color: #212020;
-    color: rgb(255, 255, 255);
-    padding: 10px 30px; /* Adjusted padding */
-    border: none;
-    border-color: #b3b3b3;
-    border-radius: 20px;
+.login-toggle, .signup-toggle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 60px;
+    font-size: 16px;
+    border: 2px solid #330475;
+    border-radius: 5px;
+    background-color: #8e7eea;
+    color: #330475;
     cursor: pointer;
-    width: 150px;
-}
-
-#login-toggle:hover {
-    background-color: #333333; /* Darker shade for hover */
-    color: #f0f0f0; /* Slightly lighter text color on hover */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
-}
-/* Side menu styles */
-#side-menu {
-    position: fixed;
-    top: 0;
-    left: -300px; /* Hidden off-screen */
-    width: 250px;
-    height: 100%;
-    background-color: #000000; /* Darker background for contrast */
-    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
-    transition: left 0.4s ease; /* Slightly slower and smoother transition */
-    z-index: 1000; /* Ensure it is on top */
-    padding: 20px;
-    overflow-y: auto; /* Allows scrolling if content exceeds the viewport height */
-}
-
-#side-menu.open {
-    left: 0; /* Show the menu */
-}
-
-#side-menu button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #ffffff; /* White color for visibility */
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-/* Header in the side menu */
-.side-menu h2 {
-    color: #ffffff; /* White text color for contrast */
-    font-size: 22px;
-    border-bottom: 2px solid #444; /* Subtle bottom border for separation */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-/* Navigation list styles */
-.side-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.side-menu ul li {
-    margin: 15px 0;
-}
-
-.side-menu ul li a {
+    transition: all 0.3s ease;
     text-decoration: none;
-    color: #b3b3b3; /* Soft grey color for links */
-    font-size: 18px;
+}
+
+.signup-toggle:hover{
+    color: #030c8d;
+    background-color: #4c53af;
+    border-color: #030c8d;
+}
+
+.login-toggle:hover {
+    color: #9c081e;
+    background-color: #af4c4c;
+    border-color: #9c081e;
+}
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: linear-gradient(45deg, #350f06, #5e94ad); 
+    width: 100%;
+    position: absolute;
+}
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: linear-gradient(45deg, #350f06, #5e94ad);
+    width: 100%; 
+    position: absolute; 
+}
+form label {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
     display: block;
-    padding: 10px 0;
-    transition: color 0.3s ease;
+    margin-bottom: 5px;
 }
 
-.side-menu ul li a:hover {
-    color: #ffffff; /* Changes to white on hover */
-    text-decoration: underline; /* Underline for hover effect */
+form input[type="text"], form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-/* Optional: Active link style */
-.side-menu ul li a.active {
-    color: #ffd700; /* Gold color for active link */
-    font-weight: bold;
+.login-btn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 15px 50px; /* Reduced padding for a slimmer look */
+    font-size: 14px; /* Slightly smaller font size */
+    border: 2px solid #170530; /* Maintain border for definition */
+    border-radius: 25px; /* Rounded edges for a modern look */
+    background-color: #4a3f8c; /* Adjusted to a lighter, vibrant shade */
+    color:#170530; /* White text for better contrast */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 200px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Main content area */
-main {
-    flex: 1;
-    padding: 20px;
-    background-color: #bab7b7;
-    color: #000000;
-    width: 100%; /* Ensure main content spans the full width */
-    box-sizing: border-box; /* Include padding in width calculation */
+.login-btn:hover {
+    background-color: #170530; /* Darker shade on hover */
+    color: #ffffff; /* Maintain contrast on hover */
+    transform: translateY(-2px); /* Slight upward lift for interaction */
 }
 
-/* Footer styles */
+.signup-btn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 15px 50px; /* Reduced padding for a slimmer look */
+    font-size: 14px; /* Slightly smaller font size */
+    border: 2px solid #750419; /* Maintain border for definition */
+    border-radius: 25px; /* Rounded edges for a modern look */
+    background-color:        #964062; /* Adjusted to a softer pink shade */
+    color:#750419; /* White text for better contrast */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display:inline-block;
+    margin-left: 200px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+legend{
+    color: white;
+    
+}
+.signup-btn:hover {
+    background-color: #750419; /* Darker shade on hover */
+    color: #ffffff; /* Maintain contrast on hover */
+    transform: translateY(-2px); /* Slight upward lift for interaction */
+}
+
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"] {
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    background-color: #a29f9f;
+    border-color: #000000;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .btn {
+        padding: 10px 50px;
+    }
+}
+
 footer {
     background-color: #000000;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 3px;
+    width: 100%; /* Ensure footer takes full width */
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+/* Ensure html and body take full height */
+
+
+/* Footer should stick to the bottom */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
 }

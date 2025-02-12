@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const logintoggle = document.getElementById("login-toggle");
-
-  logintoggle.addEventListener("click", function () {
-    window.location.href = "login.html"; // Redirect to login.html
-  });
-
   const menuToggle = document.getElementById("menu-toggle");
-  const sideMenu = document.getElementById("side-menu");
-  const closeMenu = document.getElementById("close-menu");
+  const sidebar = document.querySelector(".sidebar");
 
+  // Toggle sidebar visibility
   menuToggle.addEventListener("click", function () {
-    sideMenu.classList.add("open");
+      sidebar.classList.toggle("open");
+      document.body.classList.toggle("menu-open");
   });
 
-  closeMenu.addEventListener("click", function () {
-    sideMenu.classList.remove("open");
+  // Close sidebar when clicking outside
+  document.addEventListener("click", function (event) {
+      if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+          sidebar.classList.remove("open");
+          document.body.classList.remove("menu-open");
+      }
   });
 });
+
 
 const balance = document.getElementById("balance");
 const money_plus = document.getElementById("money-plus");
@@ -45,6 +45,5 @@ function addTransactionDOM(transaction) {
     <button class="delete-btn" onclick="">x</button>
     `;
     list.appendChild(items);
-    function updateValue()
     
 }
